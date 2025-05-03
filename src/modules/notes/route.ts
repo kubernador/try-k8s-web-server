@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { noteController } from "./controller";
-import { Note } from "@/prisma/generated/prisma";
+import { Note } from "@prisma/client";
 
 const router = express.Router();
 

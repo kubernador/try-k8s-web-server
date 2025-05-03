@@ -1,4 +1,4 @@
-import { Note } from "@/prisma/generated/prisma";
+import { Note } from "@prisma/client";
 import { prisma } from "../../utils/prisma/client";
 
 async function create(note: Note) {

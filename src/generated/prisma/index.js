@@ -132,7 +132,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/paulo/Kubernador/try-k8s-web-server-2/src/generated/prisma",
+      "value": "/home/paulo/Kubernador/try-k8s-web-server/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -146,11 +146,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/paulo/Kubernador/try-k8s-web-server-2/prisma/schema.prisma",
+    "sourceFilePath": "/home/paulo/Kubernador/try-k8s-web-server/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
@@ -160,12 +160,11 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "postgresql://postgres:password@localhost:5432/mydb?schema=public"
       }
     }
   },

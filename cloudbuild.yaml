@@ -1,0 +1,18 @@
+steps:
+  - id: 'build'
+    name: gcr.io/cloud-builders/docker
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'docker build -t ${_IMAGE_NAME}:${_IMAGE_TAG} .'
+  - id: 'attest'
+    name: gcr.io/${_PROJECT_ID}/binauthz-attestation:latest
+    args:
+      - '--artifact-url'
+      - '${_IMAGE_NAME}:${_IMAGE_TAG}'
+      - '--attestor'
+      - 'projects/${_PROJECT_ID}/attestors/${_ATTESTOR_NAME}'
+      - '--keyversion'
+      - 'projects/${_PROJECT_ID}/locations/${_KEY_LOCATION}/keyRings/${_KEYRING_NAME}/cryptoKeys/${_KEY_NAME}/cryptoKeyVersions/${_KEY_VERSION}'
+images:
+  - '${_IMAGE_NAME}:${_IMAGE_TAG}'

@@ -17,6 +17,5 @@ steps:
 images:
   - '${_IMAGE_NAME}:${_IMAGE_TAG}'
 
-build:
-  options:
-    default_logs_bucket_behavior: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -16,3 +16,7 @@ steps:
       - 'projects/${_PROJECT_ID}/locations/${_KEY_LOCATION}/keyRings/${_KEYRING_NAME}/cryptoKeys/${_KEY_NAME}/cryptoKeyVersions/${_KEY_VERSION}'
 images:
   - '${_IMAGE_NAME}:${_IMAGE_TAG}'
+
+build:
+  options:
+    default_logs_bucket_behavior: CLOUD_LOGGING_ONLY
